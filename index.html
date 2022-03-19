@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft To Do</title>
+    <link rel="shortcut icon" href="resources/img/icon.png" type="image/x-icon">
+    <!-- GOOGLE FONTS: POPPINS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <!-- font awesome cdn -->
+    <script src="https://kit.fontawesome.com/efb5548e33.js" crossorigin="anonymous"></script>
+    <meta name="description" content="Microsoft TO DO Copy by Mahi">
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="resources/grid.css"> -->
+    <link rel="stylesheet" href="/resources/style.css">
+    </head>
+<body>
+    <main>
+        <!-- left sidebar -->
+        <div class="row overflow-hidden g-0">
+
+            <div class="col-sm-3 sidebar">
+                <div class="sidebar-content position-relative">
+
+                    <div class="account d-flex overflow-hidden" style="text-overflow: ellipsis;">
+                        <div class="avatar">
+                            <div class="img-circle">
+                                <i class="fa-solid fa-user avat"></i>
+                            </div>
+                        </div>
+                        <div class="user-info">
+                            <p class="user-name my-0">Ishat Noor Mahi</strong></p>
+                            <p class="user-email">ishatnoormahi@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="search">
+                        <input type="text" class="form-control search-input" placeholder="Search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="sidebar-main position-relative">
+
+                        <ul class="ul list-unstyled">
+                            <li><span><i class="fa-solid fa-sun"></i></span>My day</li>
+                            <li><span><i class="fa-solid fa-note-sticky"></i></span>Planned</li>
+                            <li><span class="plan-star" style="font-size: 17px;">&star;</span>Important</li>
+                            <li class="active"><span><i class="fa-solid fa-house"></i></span>Tasks</li>
+                            <li><span><i class="fa-solid fa-user"></i></span>Assigned to me</li>
+                        </ul>
+
+                      <hr>
+                        <div class="ns">
+                            <i class="fa-solid fa-bars"></i>
+                            <span>Basic Knowledge</span>
+                        </div>
+                    </div>
+                    <div class="sidebar-footer position-absolute">
+                        <div class="asw w-100">
+                            <i class="fa-solid fa-plus"></i><span class="mx-3">New List</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-9 main-sec">
+                <div class="top-border"></div>
+                <div class="content">
+                    <div class="to-do-menu" id="menu-btn">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <!-- menu card -->
+                    <div class="menu-card" id="menu_card">
+                        <div class="h">
+                            <ul class="li d-inline list-unstyled" style="font-size: 14px;">
+                                <li class="d-flex justify-content-start"><i class="fa-solid fa-sort"></i> <span class="mx-4">Sort By</span> <i class="fa-solid fa-angle-right align-self-end"></i></li>
+                                <p class="text-muted text-start my-3">Theme</p>
+                                <li>
+                                    <ul class="ul list-unstyled color-palet d-flex flex-wrap">
+                                        <li class="theme-primary" onclick="changeTheme('#788CDE')"></li>
+                                        <li class="theme-green" onclick="changeTheme('#4AA079')"></li>
+                                        <li class="theme-teal" onclick="changeTheme('#479E98')"></li>
+                                        <li class="theme-purple" onclick="changeTheme('#788CDE')"></li>
+                                        <li class="theme-purple-2" onclick="changeTheme('#D6BDE7')"></li>
+                                        <li class="theme-crimson" onclick="changeTheme('#E46B67')"></li>
+                                        <li class="theme-purple" onclick="changeTheme('#BC7ABC')"></li>
+                                        
+                                        <li class="theme-green" onclick="changeTheme('#4AA079')"></li>
+                                        <li class="theme-crimson" onclick="changeTheme('#E46B67')"></li>
+                                        <li class="theme-teal" onclick="changeTheme('#479E98')"></li>
+                                        <li class="theme-purple-2" onclick="changeTheme('#D6BDE7')"></li>
+                                        <li class="theme-purple" onclick="changeTheme('#BC7ABC')"></li>
+
+                                        <li class="img-theme"><img src="resources/img/img1.jpg" alt=""></li>
+                                        <li class="img-theme"><img src="resources/img/img2.jpg" alt=""></li>
+                                        <li class="img-theme"><img src="resources/img/img3.jpg" alt=""></li>
+                                        <li class="img-theme"><img src="resources/img/img4.jpg" alt=""></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="list-unstyled my-4 sd" style="color: rgba(228, 228, 228, 0.863);">   
+                                        <li><i class="fa-solid fa-print"></i> Print List</li>
+                                        <li><i class="fa-solid fa-envelope"></i> Email List</li>
+                                        <li><i class="fa-solid fa-location-dot"></i> Pin To Start</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="task">
+                        <div class="top">
+                            <i class="fa-solid fa-house theme-item-txt"></i>
+                            <span class="h5 mx-2 theme-item-txt">Tasks</span>
+                        </div>
+                        <div class="empty text-center" id="empty">
+                            <img src="resources/img/task.png" alt="No Task Available">
+                            <p class="theme-item-txt">Tasks will show up here after you add one.</p>
+                        </div>
+                        <div class="task-body d-none" id="task_body">
+                            <button class="btn btn-sm btn-dark theme-item-bg" style="margin-top: 20px;">	
+                                To Do</button>
+                            <ul class="list-unstyled task-ul">
+                                <!-- <li class="filled-li"> 
+                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" style="background: transparent;border: #fff9 solid;">
+                                    <label class="form-check-label" for="flexRadioDefault1">
+                                        Task 1
+                                    </label>
+                                    <button class="btn btn-sm btn-danger text-white mx-2 float-end" onclick="this.parentElement.remove()">
+                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                    </button>
+                                </li> -->
+                                <div class="beautify" id="beautify">
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </div>
+                            </ul>
+                            <button class="btn btn-sm btn-dark theme-item-bg">	
+                                Completed</button>
+                            <ul class="list-unstyled my-4" id="completed-ul" style="font-size: 20px;">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="add-task">
+                            <div class="add-task-circle-icon">
+                                <span class="" id="add-text"><i class="fa-solid fa-plus"></i> <span class="mx-1 add-txt theme-item-txt">Add Task</span></span>
+                                <i class="fa-solid fa-o d-none theme-item-txt" id="cir"></i>
+                            </div>
+                            <input type="text" class="w-100" id="add_task_input">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="resources/script.js"></script>
+</body>
+</html>
